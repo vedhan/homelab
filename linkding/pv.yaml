@@ -1,0 +1,17 @@
+# I m installing linkding with persistent storage ( To know about What persistent storage is, check out my Kubernetes 101 post )
+
+# YAML for Persistent Volume ( pv.yml )
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: linkding-storage
+  namespace: linkding
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  hostPath:
+    path: /etc/linkding/
+  storageClassName: local-storage

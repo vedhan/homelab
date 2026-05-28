@@ -1,0 +1,9 @@
+#helm repo add pascaliske https://charts.pascaliske.dev
+helm repo update
+helm install linkding pascaliske/linkding
+
+Follow: https://gist.github.com/AkashRajvanshi/9e2493eb7c9dd1e73f3f4c07a6f846cd#file-linkding-kubernetes-sh
+mkdir /home/ved/data in k8-master host
+kb apply -f kv.yml
+kb apply -f kvc.yml
+
