@@ -4,6 +4,7 @@ kind: Service
 metadata:
   name: linkding-service
 spec:
+  type: NodePort
   selector:
     app: linkding
   ports:
